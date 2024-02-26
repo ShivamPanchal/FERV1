@@ -53,12 +53,11 @@ class Faceemotion(VideoTransformerBase):
 
 def main():
     # Face Analysis Application #
-    #st.title("Live Class Monitoring System")
-    activiteis = ["Webcam Face Detection", "About"]
+    activiteis = ["Webcam Face Detection", "About"]  # Corrected choice labels
     choice = st.sidebar.selectbox("Select Activity", activiteis)
     st.sidebar.markdown(
         """ Developed by Hikmet Topak """)
-    if choice =="Webcam Face Detection":
+    if choice == "Webcam Face Detection":
         html_temp = """
     <body style="background-color:red;">
     <div style="background-color:teal ;padding:10px">
@@ -72,7 +71,7 @@ def main():
         webrtc_streamer(key="example", mode=WebRtcMode.SENDRECV, rtc_configuration=RTC_CONFIGURATION,
                         video_processor_factory=Faceemotion)
 
-    elif choice == "Home & About":
+    elif choice == "About":  # Corrected choice label
         html_temp = """
     <body style="background-color:red;">
     <div style="background-color:teal ;padding:10px">
@@ -102,6 +101,7 @@ def main():
 
     else:
         pass
+
 
 
 if __name__ == "__main__":
