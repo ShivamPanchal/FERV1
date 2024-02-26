@@ -31,11 +31,11 @@ class Faceemotion(VideoTransformerBase):
         face_detect = cv2.CascadeClassifier(cv2.data.haarcascades +'haarcascade_frontalface_default.xml')
         emotion_labels = ['Angry','Disgust','Fear','Happy','Neutral', 'Sad', 'Surprise']
         
-            
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         faces = face_detect.detectMultiScale(gray, 1.3,1)
         
-
+        b = img.copy()  # Initialize b with a copy of img
+        
         for (x,y,w,h) in faces:
             a=cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
             roi_gray = gray[y:y+h,x:x+w]
