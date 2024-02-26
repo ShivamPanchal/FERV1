@@ -54,49 +54,11 @@ class Faceemotion(VideoTransformerBase):
 def main():
     # Face Analysis Application #
     st.title("Live Class Monitoring System")
-    activiteis = ["Introduction","Home", "Webcam Face Detection", "About"]
+    activiteis = ["Webcam Face Detection", "Home & About"]
     choice = st.sidebar.selectbox("Select Activity", activiteis)
     st.sidebar.markdown(
         """ Developed by Hikmet Topak """)
-    if choice =="Introduction":
-        html_temp = """
-    <body style="background-color:red;">
-    <div style="background-color:teal ;padding:10px">
-    <h2 style="color:white;text-align:center;">Face Emotion Recognition WebApp</h2>
-    </div>
-    <br />
-    <div style="background-image: url('https://cdn.pixabay.com/photo/2020/06/13/17/50/milky-way-5295155_960_720.jpg');padding:150px;">
-    <h3 style="color:white;text-align:center;">The Indian education landscape has been undergoing rapid changes for the past 10 years owing to the advancement of web-based learning services, specifically, eLearning platforms.</h3>
-    <h4 style="color:white;text-align:center;">Digital classrooms are conducted via video telephony software program (ex-Zoom) where it’s not possible for medium scale class (25-50) to see all students and access the mood. Because of this drawback, students are not focusing on content due to lack of surveillance. While digital platforms have limitations in terms of physical surveillance but it comes with the power of data and machines which can work for you. It provides data in the form of video, audio, and texts which can be analyzed using deep learning algorithms. I have built a deep learning model which detects the real time emotions of students through a webcam so that teachers can understand if students are able to grasp the topic according to students' expressions or emotions</h4>
-    </div>
-    </body>
-        """
-        st.markdown(html_temp, unsafe_allow_html=True)
-      
-              
-    elif choice =="Home":
-        html_temp = """
-    <body style="background-color:red;">
-    <div style="background-color:teal ;padding:10px">
-    <h2 style="color:white;text-align:center;">Face Emotion Recognition WebApp</h2>
-    </div>
-    
-    </body>
-        """
-        st.markdown(html_temp, unsafe_allow_html=True)
-        st.title(":angry::dizzy_face::fearful::smile::pensive::open_mouth::neutral_face:")
-        st.write("**Instructions while using the APP**")
-        st.write('''
-                  1. Click on the Start button to start.
-                 
-                  2. WebCam window will open  automatically. 
-		  
-		          3. It will automatically  predict emotions at that instant.
-                  
-                  4. Make sure that camera shouldn't be used by any other app.
-                  
-                  5. Click on  Stop  to end.''')
-    elif choice == "Webcam Face Detection":
+    if choice =="Webcam Face Detection":
         html_temp = """
     <body style="background-color:red;">
     <div style="background-color:teal ;padding:10px">
@@ -110,7 +72,7 @@ def main():
         webrtc_streamer(key="example", mode=WebRtcMode.SENDRECV, rtc_configuration=RTC_CONFIGURATION,
                         video_processor_factory=Faceemotion)
 
-    elif choice == "About":
+    elif choice == "Home & About":
         html_temp = """
     <body style="background-color:red;">
     <div style="background-color:teal ;padding:10px">
@@ -130,7 +92,7 @@ def main():
 
         html_temp4 = """
                              		<div style="background-color:#98AFC7;padding:10px">
-                             		<h4 style="color:white;text-align:center;">This Application is developed by Aayushi Sharma using Streamlit Framework, Opencv, Tensorflow and Keras library for demonstration purpose.</h4>
+                             		<h4 style="color:white;text-align:center;">This Application is developed by Hikmet Topak using Streamlit Framework, Opencv, Tensorflow and Keras library for demonstration purpose.</h4>
                              		<h4 style="color:white;text-align:center;">Thanks for Visiting</h4>
                              		</div>
                              		<br></br>
@@ -144,4 +106,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
