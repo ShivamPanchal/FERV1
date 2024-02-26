@@ -57,7 +57,7 @@ def main():
     activiteis = ["Introduction","Home", "Webcam Face Detection", "About"]
     choice = st.sidebar.selectbox("Select Activity", activiteis)
     st.sidebar.markdown(
-        """ Developed by Aayushi Sharma """)
+        """ Developed by Hikmet Topak """)
     if choice =="Introduction":
         html_temp = """
     <body style="background-color:red;">
