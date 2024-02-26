@@ -54,7 +54,7 @@ class Faceemotion(VideoTransformerBase):
 def main():
     # Face Analysis Application #
     st.title("Live Class Monitoring System")
-    activiteis = ["Webcam Face Detection", "Home & About"]
+    activiteis = ["Webcam Face Detection", "About"]
     choice = st.sidebar.selectbox("Select Activity", activiteis)
     st.sidebar.markdown(
         """ Developed by Hikmet Topak """)
