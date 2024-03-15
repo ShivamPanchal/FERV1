@@ -56,7 +56,7 @@ def main():
     activiteis = ["Webcam Face Detection", "About"]  # Corrected choice labels
     choice = st.sidebar.selectbox("Select Activity", activiteis)
     st.sidebar.markdown(
-        """ Developed by Hikmet Topak """)
+        """   """)
     if choice == "Webcam Face Detection":
         html_temp = """
     <body style="background-color:red;">
@@ -91,7 +91,7 @@ def main():
 
         html_temp4 = """
                              		<div style="background-color:#98AFC7;padding:10px">
-                             		<h4 style="color:white;text-align:center;">This Application is developed by Hikmet Topak using Streamlit Framework, Opencv, Tensorflow and Keras library for demonstration purpose.</h4>
+                             		<h4 style="color:white;text-align:center;">This Application is developed by using Streamlit Framework, Opencv, Tensorflow and Keras library for demonstration purpose.</h4>
                              		<h4 style="color:white;text-align:center;">Thanks for Visiting</h4>
                              		</div>
                              		<br></br>
